@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+// Angular Material Functions and Mixins
+@import '~@angular/material/theming';
+// Theme Colors
+@import 'theme.scss';
+
+body, html{
+  height: 100%
+}
+body{
+  margin: 0;
+  background-color: rgb(236, 236, 236);
+}
+
+.pad-xs{
+  padding: 5px
+}
+
+.animation-section__background{
+}

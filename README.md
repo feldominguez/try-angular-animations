@@ -1,5 +1,7 @@
 # Animations
 
+A work in progress. At large an angular project depicting Angular Animations and their use.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
 
 ## Development server
