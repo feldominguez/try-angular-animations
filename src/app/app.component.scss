@@ -1,0 +1,15 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+
+.sidenav-container {
+  padding-top: 65px;
+}
+
+mat-sidenav {
+  width: 260px;
+}

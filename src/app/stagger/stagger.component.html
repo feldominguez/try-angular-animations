@@ -1,5 +1,28 @@
 <div class='animation-section__background'>
-  <mat-card fxFlex='30'>
-    asdasd
+  <mat-card fxFlex='50'>
+<mat-card-title>
+  Popular Subreddits
+</mat-card-title>
+<mat-card-subtitle>
+  The latest trending reddits
+</mat-card-subtitle>
+<mat-divider></mat-divider>
+
+<mat-card-content>
+    <mat-list>
+      <ng-template ngFor let-item [ngForOf]="popularSubreddits" >
+        <mat-list-item>
+            {{item}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-template>
+    </mat-list>
+  </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button color='accent'>See More</button>
+    </mat-card-actions>
   </mat-card>
 </div>
+
+<pre><code>{{newData | json}}</code></pre>

@@ -4,20 +4,45 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import {
-  MatMenuModule, MatCardModule, MatInputModule,
-  MatButtonModule, MatListModule, MatIconModule, MatSidenavModule,
-  MatToolbarModule, MatTooltipModule, MatDialogModule, MatProgressBarModule,
-  MatTableModule, MatDialogContent, MatIconRegistry, MatIcon,
-  MatTabsModule, MatChipsModule, MatSelectModule, MatIconBase,
-  MatLineModule, MatCommonModule, MatButtonToggleModule, MatOptionModule,
-  MatListSubheaderCssMatStyler, MatGridListModule, MatDatepickerModule,
-  MatNativeDateModule, MatSlideToggleModule, MatProgressSpinnerModule,
-  MatRippleModule, MatExpansionModule, MatSnackBarModule, MatCheckboxModule,
+  MatMenuModule,
+  MatCardModule,
+  MatInputModule,
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatDialogModule,
+  MatProgressBarModule,
+  MatTableModule,
+  MatDialogContent,
+  MatIconRegistry,
+  MatIcon,
+  MatTabsModule,
+  MatChipsModule,
+  MatSelectModule,
+  MatIconBase,
+  MatLineModule,
+  MatCommonModule,
+  MatButtonToggleModule,
+  MatOptionModule,
+  MatListSubheaderCssMatStyler,
+  MatGridListModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSlideToggleModule,
+  MatProgressSpinnerModule,
+  MatRippleModule,
+  MatExpansionModule,
+  MatSnackBarModule,
+  MatCheckboxModule,
   MatRadioModule
 } from '@angular/material';
 
@@ -25,13 +50,12 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { StaggerComponent } from './stagger/stagger.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StaggerComponent
-  ],
+  declarations: [AppComponent, StaggerComponent, MainComponent],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -60,9 +84,9 @@ import { StaggerComponent } from './stagger/stagger.component';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
-    MatChipsModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
