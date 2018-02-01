@@ -51,6 +51,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { StaggerComponent } from './stagger/stagger.component';
 import { MainComponent } from './main/main.component';
+import { RedditDataService } from './shared/reddit-data.service';
 
 @NgModule({
   declarations: [AppComponent, StaggerComponent, MainComponent],
@@ -86,7 +87,7 @@ import { MainComponent } from './main/main.component';
     MatCheckboxModule,
     MatChipsModule
   ],
-  providers: [],
+  providers: [RedditDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
