@@ -24,6 +24,22 @@ body {
   background-color: #dedede;
 }
 
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+
+.sidenav-container {
+  padding-top: 65px;
+}
+
+mat-sidenav {
+  width: 260px;
+}
+
 $util-types: 'push', 'pad', 'pull';
 $util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45;
 @each $param in $util-params {

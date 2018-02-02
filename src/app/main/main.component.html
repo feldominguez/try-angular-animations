@@ -1,13 +1,26 @@
+<mat-sidenav-container fullscreen class='sidenav-container'>
+    <mat-sidenav opened='false' #sidenav>
+      <mat-toolbar color='primary'>
+          <span>Animations</span>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>Home</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="['/stagger']" (click)='sidenav.toggle()'>Stagger</a>
+      </mat-nav-list>
+    </mat-sidenav>
 
-<div class='pad-xs'>
-<mat-card>
-    <mat-card-title>Stagger</mat-card-title>
+    <mat-toolbar color='primary' class='mat-elevation-z1 fixed-header'>
+        <button mat-icon-button (click)='sidenav.toggle()'>
+            <mat-icon class="mat-18">menu</mat-icon>
+        </button>
+         <span>Angular Animations</span>
+       </mat-toolbar>
 
-<mat-card-content>
- Loop through models and animate with a delaying effect.
-</mat-card-content>
-<mat-card-actions align="start">
-    <a [routerLink]="['/stagger']" mat-button color='accent'>SEE ANIMATION</a>
-</mat-card-actions>
-</mat-card>
-</div>
+       <section>
+
+
+            <router-outlet></router-outlet>
+
+    </section>
+  </mat-sidenav-container>
