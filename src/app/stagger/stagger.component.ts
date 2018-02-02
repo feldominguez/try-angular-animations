@@ -11,7 +11,8 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./stagger.component.scss']
 })
 export class StaggerComponent implements OnInit {
-  popularSubreddits;
+  asyncSubreddits;
+  staticSubreddits;
 
   constructor(private redditData: RedditDataService) {}
 
@@ -19,6 +20,29 @@ export class StaggerComponent implements OnInit {
     this.redditData
       .getData()
       .map((data: any) => data.subreddit_names)
-      .subscribe(data => (this.popularSubreddits = data));
+      .subscribe(data => (this.asyncSubreddits = data));
+
+    this.redditData
+      .getStaticData()
+      .map((data: any) => data.subreddit_names)
+      .subscribe(data => (this.staticSubreddits = data));
+  }
+
+  reloadAsyncSubreddits(): void {
+    this.asyncSubreddits = null;
+    this.redditData
+      .getData()
+      .map((data: any) => data.subreddit_names)
+      .subscribe(data => (this.asyncSubreddits = data));
+  }
+
+  reloadStaticSubreddits(): void {
+    this.staticSubreddits = null;
+    this.redditData
+      .getStaticData()
+      .map((data: any) => data.subreddit_names)
+      .subscribe(data => {
+        this.staticSubreddits = data;
+      });
   }
 }

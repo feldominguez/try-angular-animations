@@ -21,7 +21,7 @@
 
 <mat-card-content>
     <mat-list>
-      <ng-template ngFor let-item [ngForOf]="popularSubreddits" >
+      <ng-template ngFor let-item [ngForOf]="staticSubreddits" >
         <mat-list-item>
             {{item}}
         </mat-list-item>
@@ -31,7 +31,7 @@
   </mat-card-content>
 
     <mat-card-actions>
-      <button mat-button color='accent'>RELOAD</button>
+      <button mat-button color='accent' (click)='reloadStaticSubreddits($event)'>RELOAD</button>
     </mat-card-actions>
   </mat-card>
 
@@ -47,7 +47,7 @@
 
 <mat-card-content>
     <mat-list>
-      <ng-template ngFor let-item [ngForOf]="popularSubreddits" >
+      <ng-template ngFor let-item [ngForOf]="asyncSubreddits" >
         <mat-list-item>
             {{item}}
         </mat-list-item>
@@ -57,7 +57,7 @@
   </mat-card-content>
 
     <mat-card-actions>
-      <button mat-button color='accent'>RELOAD</button>
+      <button mat-button color='accent'  (click)='reloadAsyncSubreddits($event)'>RELOAD</button>
     </mat-card-actions>
   </mat-card>
   </div>
