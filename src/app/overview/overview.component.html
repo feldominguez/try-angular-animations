@@ -1,4 +1,18 @@
-<div class='pad-xs'>
+<div class='bgc-grey-900 pad-top-60 pad-bottom-40' fxLayoutAlign='row'>
+  <div class='pad-left-20 pad-right-20 pad-left-30'>
+      <h1 class='mat-display-1 tw-500 push-bottom-15 tc-grey-50'>Try Angular Animations</h1>
+      <h3 class='mat-title tw-300 tc-amber-700'>Find examples and discover the animations library Angular offers.</h3>
+  </div>
+  <!-- <div>
+    <mat-icon>
+      <mat-icon class='header-icon'>grain</mat-icon>
+    </mat-icon>
+  </div> -->
+</div>
+
+
+<div class='pad-xs' fxLayout='row'>
+  <div @fadeAnimate class='push-10' fxFlex='50'>
     <mat-card>
         <mat-card-title>Stagger</mat-card-title>
 
@@ -10,3 +24,17 @@
     </mat-card-actions>
     </mat-card>
     </div>
+
+    <div @fadeAnimate class='push-10' fxFlex='50'>
+    <mat-card >
+        <mat-card-title>Fade</mat-card-title>
+
+    <mat-card-content>
+     Fade animation.
+    </mat-card-content>
+    <mat-card-actions align="start">
+        <a [routerLink]="['/fade']" mat-button color='accent'>SEE ANIMATION</a>
+    </mat-card-actions>
+    </mat-card>
+    </div>
+  </div>

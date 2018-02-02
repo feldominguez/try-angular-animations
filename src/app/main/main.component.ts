@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  routes = [
+    // {
+    //   icon: '',
+    //   name: 'Overview',
+    //   route: ['/']
+    // },
+    {
+      categoryName: 'Animations',
+      routes: [
+        {
+          route: ['/stagger'],
+          name: 'Stagger'
+        },
+        {
+          route: ['/fade'],
+          name: 'Fade'
+        }
+      ]
+    }
+  ];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

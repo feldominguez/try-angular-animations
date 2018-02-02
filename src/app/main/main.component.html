@@ -4,9 +4,18 @@
           <span>Animations</span>
       </mat-toolbar>
       <mat-nav-list>
-        <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>Home</a>
+        <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>
+          <mat-icon class='push-right-15 push-left-5 tc-grey-700'>dashboard</mat-icon>
+         <span class='tc-grey-800'>Overview</span>
+        </a>
         <mat-divider></mat-divider>
-        <a mat-list-item [routerLink]="['/stagger']" (click)='sidenav.toggle()'>Stagger</a>
+        <ng-template ngFor let-category [ngForOf]='routes'>
+            <h3 matSubheader>{{category.categoryName}}</h3>
+            <a *ngFor='let item of category.routes' mat-list-item [routerLink]="item.route" (click)='sidenav.toggle()'>
+                <mat-icon class='push-right-15 push-left-5 tc-grey-700'>grain</mat-icon>
+              <span class='tc-grey-800'>{{item.name}}</span>
+            </a>
+        </ng-template>
       </mat-nav-list>
     </mat-sidenav>
 

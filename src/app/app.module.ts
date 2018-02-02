@@ -53,9 +53,10 @@ import { StaggerComponent } from './stagger/stagger.component';
 import { MainComponent } from './main/main.component';
 import { RedditDataService } from './shared/reddit-data.service';
 import { OverviewComponent } from './overview/overview.component';
+import { FadeComponent } from './fade/fade.component';
 
 @NgModule({
-  declarations: [AppComponent, StaggerComponent, MainComponent, OverviewComponent],
+  declarations: [AppComponent, StaggerComponent, MainComponent, OverviewComponent, FadeComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

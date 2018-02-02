@@ -1,0 +1,65 @@
+// Margin, Padding, and Negative Margin Utility Styles
+$util-types: 'push', 'pad', 'pull';
+$util-positions: 'top', 'bottom', 'left', 'right';
+$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65;
+
+@each $param in $util-params {
+  .push-#{$param} {
+    margin: #{$param}px;
+  }
+  .pad-#{$param} {
+    padding: #{$param}px;
+  }
+  .pull-#{$param} {
+    margin: -#{$param}px;
+  }
+}
+
+// All Types, Positions and Parameters
+@each $type in $util-types {
+  @each $position in $util-positions {
+    @each $param in $util-params {
+      .#{$type}-#{$position}-#{$param} {
+        @if $type == 'pad' {
+          padding-#{$position}: #{$param}px;
+        } @else if $type == 'pull' {
+          margin-#{$position}: -#{$param}px;
+        } @else {
+          margin-#{$position}: #{$param}px;
+        }
+      }
+    }
+  }
+}
+
+// Cancel Utility Styles at Specific Position
+@each $type in $util-types {
+  @each $position in $util-positions {
+    .#{$type}-#{$position}-none {
+      @if $type == 'pad' {
+        padding-#{$position}: 0px;
+      } @else {
+        margin-#{$position}: 0px;
+      }
+    }
+  }
+}
+
+// Cancel Complete Utility Class
+@each $type in $util-types {
+  .#{$type}-none {
+    @if $type == pad {
+      padding: 0px;
+    } @else {
+      margin: 0px;
+    }
+  }
+}
+
+// Font Weight Utilities
+$util-font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $weight in $util-font-weights {
+  .tw-#{$weight} {
+    font-weight: #{$weight} !important;
+  }
+}

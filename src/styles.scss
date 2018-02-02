@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 // Angular Material Functions and Mixins
 @import '~@angular/material/theming';
+
 // Theme Colors
 @import 'theme.scss';
+
+// Utility Imports
+@import 'utility-styles/_colors.scss';
+@import 'utility-styles/_utilities.scss';
+
+// Custom Styles
 
 body,
 html {
@@ -15,9 +22,6 @@ body {
 
 .pad-xs {
   padding: 5px;
-}
-
-.animation-section__background {
 }
 
 .mat-drawer-container {
@@ -37,52 +41,9 @@ body {
 }
 
 mat-sidenav {
-  width: 260px;
+  width: 300px;
 }
 
-$util-types: 'push', 'pad', 'pull';
-$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45;
-@each $param in $util-params {
-  .push-#{$param} {
-    margin: #{$param}px;
-  }
-  .pad-#{$param} {
-    padding: #{$param}px;
-  }
-  .pull-#{$param} {
-    margin: -#{$param}px;
-  }
-}
-
-@each $type in $util-types {
-  @each $param in $util-params {
-    .#{$type}-right-#{$param} {
-      @if $type == 'pad' {
-        padding-right: #{$param}px;
-      } @else {
-        margin-right: #{$param}px;
-      }
-    }
-    .#{$type}-left-#{$param} {
-      @if $type == 'pad' {
-        padding-left: #{$param}px;
-      } @else {
-        margin-left: #{$param}px;
-      }
-    }
-    .#{$type}-top-#{$param} {
-      @if $type == 'pad' {
-        padding-top: #{$param}px;
-      } @else {
-        margin-top: #{$param}px;
-      }
-    }
-    .#{$type}-bottom-#{$param} {
-      @if $type == 'pad' {
-        padding-bottom: #{$param}px;
-      } @else {
-        margin-bottom: #{$param}px;
-      }
-    }
-  }
+.header-icon {
+  font-size: 45pt;
 }
