@@ -1,23 +1,24 @@
-<mat-toolbar color='primary' mode='over'  class='fixed-header'>
-  <div fxLayout='row' fxFlex='100' fxLayoutAlign='center center'>
-    <div fxLayout='row' fxFlex='100' class='max-page-width width-100' fxLayoutAlign='center center'>
-    <button mat-icon-button (click)='sidenav.toggle()'>
-        <mat-icon class="mat-18">menu</mat-icon>
-    </button>
-     <a [routerLink]="['/']" class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50' fxLayout='row'>
-       <span fxHide fxShow.gt-sm class='push-right-10 typg-mono'>ANGULAR</span>
-       ANIMATIONS
-       </a>
-
-      <span fxFlex></span>
-      <a target='_blank' href="https://github.com/philgetz/try-angular-animations"  class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50'>
-        GITHUB
-      </a>
-      </div>
-      </div>
-   </mat-toolbar>
-
 <mat-sidenav-container class='main-drawer-container'>
+
+
+    <mat-toolbar color='primary' mode='over'  class='fixed-header'>
+        <div fxLayout='row' fxFlex='100' fxLayoutAlign='center center'>
+          <div fxLayout='row' fxFlex='100' class='max-page-width width-100' fxLayoutAlign='center center'>
+          <button mat-icon-button (click)='sidenav.toggle()'>
+              <mat-icon class="mat-18">menu</mat-icon>
+          </button>
+           <a [routerLink]="['/']" class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50' fxLayout='row'>
+             <span fxHide fxShow.gt-sm class='push-right-10 typg-mono'>ANGULAR</span>
+             ANIMATIONS
+             </a>
+
+            <span fxFlex></span>
+            <a target='_blank' href="https://github.com/philgetz/try-angular-animations"  class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50'>
+              GITHUB
+            </a>
+            </div>
+            </div>
+         </mat-toolbar>
 
     <mat-sidenav class='app-sidenav' opened='false' mode='over' fixedInViewport='true' fixedTopGap='0' fixedBottomGap='0' #sidenav>
       <mat-toolbar color='primary'>
@@ -41,6 +42,8 @@
       </mat-nav-list>
     </mat-sidenav>
 
+    <div class='app-content'>
             <router-outlet></router-outlet>
+            </div>
 
   </mat-sidenav-container>

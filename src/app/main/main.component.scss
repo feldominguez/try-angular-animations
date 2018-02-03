@@ -1,6 +1,6 @@
 .main-drawer-container {
   position: absolute;
-  top: 60px;
+  top: 0px;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -16,10 +16,19 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
+}
+
+.app-content {
+  position: absolute;
+  top: 64px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
 }
 
 @media all and(max-width: 600px) {
-  .main-drawer-container {
+  .app-content {
     top: 56px;
   }
   .fixed-header {
