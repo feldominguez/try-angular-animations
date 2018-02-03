@@ -1,8 +1,8 @@
-<mat-toolbar color='primary' mode='over' class='mat-elevation-z1 fixed-header'>
+<mat-toolbar color='primary' mode='over' fixedInViewPort='true' class='mat-elevation-z1 fixed-header'>
     <button mat-icon-button (click)='sidenav.toggle()'>
         <mat-icon class="mat-18">menu</mat-icon>
     </button>
-     <a class='text-nodecoration tc-grey typg-mono tw-400 push-left-10' fxLayout='row'>
+     <a [routerLink]="['/']" class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50' fxLayout='row'>
        <span fxHide fxShow.gt-sm class='push-right-10 typg-mono'>ANGULAR</span>
        ANIMATIONS
        </a>
