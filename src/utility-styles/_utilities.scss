@@ -1,7 +1,8 @@
 // Margin, Padding, and Negative Margin Utility Styles
 $util-types: 'push', 'pad', 'pull';
 $util-positions: 'top', 'bottom', 'left', 'right';
-$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85;
+$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85,
+  90, 95, 100;
 
 @each $param in $util-params {
   .push-#{$param} {
@@ -61,5 +62,14 @@ $util-font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
 @each $weight in $util-font-weights {
   .tw-#{$weight} {
     font-weight: #{$weight} !important;
+  }
+}
+
+@each $height in $util-params {
+  .hgt-min-#{$height} {
+    min-height: #{$height}px !important;
+  }
+  .hgt-max-#{$height} {
+    max-height: #{$height}px !important;
   }
 }

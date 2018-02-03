@@ -1,23 +1,25 @@
+<mat-toolbar color='primary' class='hgt-min-10 hgt-max-10'></mat-toolbar>
+
 <div class='bgc-grey-900 pad-top-75 pad-bottom-20 push-bottom-70' fxLayoutAlign='row'>
   <!-- <div>
   <img src="/assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px">
   </div> -->
   <div class='pad-left-20 pad-right-20 pad-left-30 home-banner'>
-    <img src="/assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px" class='home-banner-card'>
-      <h1 class='mat-display-1 tw-100 push-bottom-20 tc-grey-50'>ANGULAR <br>ANIMATIONS</h1>
+    <img src="assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px" class='home-banner-card'>
+      <h1 class='mat-display-1 tw-300 push-bottom-20 tc-grey-50 typg-mono'>ANGULAR <br>ANIMATIONS</h1>
       <h3 class='mat-body tw-300 tc-grey-50'>See examples and discover the animations library <br> Angular offers.</h3>
   </div>
 </div>
 
 
 <div class='pad-xs' fxLayout='row' fxLayoutAlign='center center'>
-  <div fxLayout='row' class='max-page-width width-100' fxLayoutAlign='center start'>
-  <div @fadeAnimate class='push-10' fxFlex='50'>
+  <div fxLayout='row' class='max-page-width width-100' fxLayoutAlign='start start'>
+  <div @fadeAnimate class='push-10' fxFlex='33'>
     <mat-card>
         <mat-card-title>Stagger</mat-card-title>
 
-    <mat-card-content>
-     Loop through models and animate with a delaying effect.
+    <mat-card-content class='hgt-min-45'>
+     Loop through models and animate with a delaying effect
     </mat-card-content>
     <mat-card-actions align="start">
         <a [routerLink]="['/stagger']" mat-button color='accent'>SEE ANIMATION</a>
@@ -25,12 +27,12 @@
     </mat-card>
     </div>
 
-    <div @fadeAnimate class='push-10' fxFlex='50'>
+    <div @fadeAnimate class='push-10' fxFlex='33'>
     <mat-card >
         <mat-card-title>Fade</mat-card-title>
 
-    <mat-card-content>
-     Fade animation.
+    <mat-card-content class='hgt-min-45'>
+     Fade animation
     </mat-card-content>
     <mat-card-actions align="start">
         <a [routerLink]="['/fade']" mat-button color='accent'>SEE ANIMATION</a>

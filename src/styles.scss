@@ -11,6 +11,11 @@
 
 // Custom Styles
 
+.typg-mono {
+  font-family: Roboto Mono !important;
+  -webkit-font-smoothing: antialiased;
+}
+
 body,
 html {
   height: 100%;
@@ -25,21 +30,34 @@ body {
 }
 
 .mat-drawer-container {
-  background-color: #dedede;
+  background-color: #e9e9e9;
 }
 
-.fixed-header {
+// .fixed-header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 1000;
+//   width: 100% !important;
+// }
+
+.mat-toolbar.mat-primary {
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  z-index: 2;
-  width: 100% !important;
+  z-index: 9;
 }
 
 .sidenav-container {
   padding-top: 65px;
 }
 
+@media all and(max-width: 600px) {
+  .sidenav-container {
+    padding-top: 57px;
+  }
+}
 mat-sidenav {
   width: 300px;
 }
@@ -55,7 +73,7 @@ mat-sidenav {
     position: absolute;
     left: -205px;
     top: -35px;
-    box-shadow: 0px 7px 24px rgba(86, 25, 86, 0.46);
+    box-shadow: 1px 9px 24px rgba(86, 25, 86, 0.46);
   }
 }
 
@@ -65,4 +83,8 @@ mat-sidenav {
 
 .width-100 {
   width: 100%;
+}
+
+.text-nodecoration {
+  text-decoration: none;
 }
