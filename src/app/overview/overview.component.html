@@ -10,8 +10,9 @@
 
 
 <div class='pad-xs' fxLayout='row' fxLayoutAlign='center center'>
-  <div fxLayout='row' class='max-page-width width-100' fxLayoutAlign='start start'>
-  <div @fadeAnimate class='push-10' fxFlex='33'>
+  <div fxLayout='row' fxLayout.lt-sm='column' class='max-page-width width-100' fxLayoutAlign='start start'>
+
+  <div @fadeAnimate class='push-10'  fxFlex.lt-sm='100' fxFlex.gt-xs='50' fxFlex.gt-md='30'>
     <mat-card>
         <mat-card-title>Stagger</mat-card-title>
 
@@ -24,7 +25,7 @@
     </mat-card>
     </div>
 
-    <div @fadeAnimate class='push-10' fxFlex='33'>
+    <div @fadeAnimate class='push-10' fxFlex.lt-sm='100' fxFlex.gt-sm='50' fxFlex.gt-md='30'>
     <mat-card >
         <mat-card-title>Fade</mat-card-title>
 
