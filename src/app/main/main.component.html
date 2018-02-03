@@ -1,4 +1,4 @@
-<mat-toolbar color='primary' class='mat-elevation-z1 fixed-header'>
+<mat-toolbar color='primary' mode='over' class='mat-elevation-z1 fixed-header'>
     <button mat-icon-button (click)='sidenav.toggle()'>
         <mat-icon class="mat-18">menu</mat-icon>
     </button>
@@ -11,12 +11,12 @@
       <a target='_blank' href="https://github.com/philgetz/try-angular-animations" mat-button>
         <span class='tw-100 mat-subhead'>GITHUB</span>
       </a>
-      <!-- </div> -->
    </mat-toolbar>
+
 <mat-sidenav-container fullscreen class='sidenav-container'>
+
     <mat-sidenav opened='false' #sidenav>
       <mat-toolbar color='primary'>
-        <!-- e<mat-icon class='tc-pink-A400'>fiber_manual_record</mat-icon> -->
           <span class='tw-400 typg-mono'>ANIMATIONS</span>
           <span fxFlex></span>
       </mat-toolbar>
