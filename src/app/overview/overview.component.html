@@ -1,17 +1,17 @@
-<div class='bgc-grey-900 pad-top-60 pad-bottom-40' fxLayoutAlign='row'>
-  <div class='pad-left-20 pad-right-20 pad-left-30'>
-      <h1 class='mat-display-1 tw-500 push-bottom-15 tc-grey-50'>Try Angular Animations</h1>
-      <h3 class='mat-title tw-300 tc-amber-700'>Find examples and discover the animations library Angular offers.</h3>
-  </div>
+<div class='bgc-grey-900 pad-top-75 pad-bottom-20 push-bottom-70' fxLayoutAlign='row'>
   <!-- <div>
-    <mat-icon>
-      <mat-icon class='header-icon'>grain</mat-icon>
-    </mat-icon>
+  <img src="/assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px">
   </div> -->
+  <div class='pad-left-20 pad-right-20 pad-left-30 home-banner'>
+    <img src="/assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px" class='home-banner-card'>
+      <h1 class='mat-display-1 tw-100 push-bottom-20 tc-grey-50'>ANGULAR <br>ANIMATIONS</h1>
+      <h3 class='mat-body tw-300 tc-grey-50'>See examples and discover the animations library <br> Angular offers.</h3>
+  </div>
 </div>
 
 
-<div class='pad-xs' fxLayout='row'>
+<div class='pad-xs' fxLayout='row' fxLayoutAlign='center center'>
+  <div fxLayout='row' class='max-page-width width-100' fxLayoutAlign='center start'>
   <div @fadeAnimate class='push-10' fxFlex='50'>
     <mat-card>
         <mat-card-title>Stagger</mat-card-title>
@@ -36,5 +36,6 @@
         <a [routerLink]="['/fade']" mat-button color='accent'>SEE ANIMATION</a>
     </mat-card-actions>
     </mat-card>
+    </div>
     </div>
   </div>

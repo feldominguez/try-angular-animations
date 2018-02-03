@@ -1,7 +1,7 @@
 // Margin, Padding, and Negative Margin Utility Styles
 $util-types: 'push', 'pad', 'pull';
 $util-positions: 'top', 'bottom', 'left', 'right';
-$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65;
+$util-params: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85;
 
 @each $param in $util-params {
   .push-#{$param} {

@@ -1,7 +1,9 @@
 <mat-sidenav-container fullscreen class='sidenav-container'>
     <mat-sidenav opened='false' #sidenav>
       <mat-toolbar color='primary'>
-          <span>Animations</span>
+        <!-- e<mat-icon class='tc-pink-A400'>fiber_manual_record</mat-icon> -->
+          <span class='tw-100'>ANIMATIONS</span>
+          <span fxFlex></span>
       </mat-toolbar>
       <mat-nav-list>
         <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>
@@ -20,10 +22,19 @@
     </mat-sidenav>
 
     <mat-toolbar color='primary' class='mat-elevation-z1 fixed-header'>
+      <!-- <div class='max-page-width width-100'> -->
         <button mat-icon-button (click)='sidenav.toggle()'>
             <mat-icon class="mat-18">menu</mat-icon>
         </button>
-         <span>Angular Animations</span>
+         <span class='tw-100 push-left-15'>
+            <!-- <mat-icon class='tc-pink-A400 mat-38'>fiber_smart_record</mat-icon> -->
+           ANGULAR ANIMATIONS
+          </span>
+          <span fxFlex></span>
+          <a href="https://github.com/philgetz/try-angular-animations" mat-button>
+            <span class='tw-100'>GITHUB</span>
+          </a>
+          <!-- </div> -->
        </mat-toolbar>
 
        <section>

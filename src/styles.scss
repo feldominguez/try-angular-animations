@@ -47,3 +47,22 @@ mat-sidenav {
 .header-icon {
   font-size: 45pt;
 }
+
+.home-banner {
+  position: relative;
+  margin: auto;
+  img {
+    position: absolute;
+    left: -205px;
+    top: -35px;
+    box-shadow: 0px 7px 24px rgba(86, 25, 86, 0.46);
+  }
+}
+
+.max-page-width {
+  max-width: 1180px;
+}
+
+.width-100 {
+  width: 100%;
+}
