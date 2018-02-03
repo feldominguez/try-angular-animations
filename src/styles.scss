@@ -9,8 +9,7 @@
 @import 'utility-styles/_colors.scss';
 @import 'utility-styles/_utilities.scss';
 
-// Custom Styles
-
+// Custom Global Styles
 .typg-mono {
   font-family: Roboto Mono !important;
   -webkit-font-smoothing: antialiased;
@@ -35,23 +34,6 @@ body {
 
 .header-icon {
   font-size: 45pt;
-}
-
-.home-banner {
-  position: relative;
-  margin: auto;
-  img {
-    position: absolute;
-    left: -205px;
-    top: -35px;
-    box-shadow: 1px 9px 24px rgba(86, 25, 86, 0.46);
-  }
-  @media all and(max-width: 600px) {
-    img {
-      left: -155px;
-      top: -30px;
-    }
-  }
 }
 
 .max-page-width {
