@@ -1,4 +1,4 @@
-<mat-toolbar color='primary' mode='over' fixedInViewPort='true' class='mat-elevation-z1 fixed-header'>
+<mat-toolbar color='primary' mode='over'  class='fixed-header'>
     <button mat-icon-button (click)='sidenav.toggle()'>
         <mat-icon class="mat-18">menu</mat-icon>
     </button>
@@ -13,13 +13,14 @@
       </a>
    </mat-toolbar>
 
-<mat-sidenav-container fullscreen class='sidenav-container'>
+<mat-sidenav-container class='main-drawer-container'>
 
-    <mat-sidenav opened='false' #sidenav>
+    <mat-sidenav class='app-sidenav' opened='false' mode='over' fixedInViewport='true' fixedTopGap='0' fixedBottomGap='0' #sidenav>
       <mat-toolbar color='primary'>
           <span class='tw-400 typg-mono'>ANIMATIONS</span>
           <span fxFlex></span>
       </mat-toolbar>
+
       <mat-nav-list>
         <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>
           <mat-icon class='push-right-15 push-left-5 tc-grey-700'>dashboard</mat-icon>

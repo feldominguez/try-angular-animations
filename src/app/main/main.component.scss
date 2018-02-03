@@ -1,0 +1,25 @@
+.main-drawer-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background-color: #e9e9e9;
+}
+
+.app-sidenav {
+  width: 280px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media all and(max-width: 600px) {
+  .main-drawer-container {
+    top: 56px;
+  }
+}
