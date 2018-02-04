@@ -1,49 +1,59 @@
 <mat-sidenav-container class='main-drawer-container'>
 
 
-    <mat-toolbar color='primary' mode='over'  class='fixed-header'>
-        <div fxLayout='row' fxFlex='100' fxLayoutAlign='center center'>
-          <div fxLayout='row' fxFlex='100' class='max-page-width width-100' fxLayoutAlign='center center'>
-          <button mat-icon-button (click)='sidenav.toggle()'>
-              <mat-icon class="mat-18">menu</mat-icon>
-          </button>
-           <a [routerLink]="['/']" class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50' fxLayout='row'>
-             <span fxHide fxShow.gt-sm class='push-right-10 typg-mono'>ANGULAR</span>
-             ANIMATIONS
-             </a>
-
-            <span fxFlex></span>
-            <a target='_blank' href="https://github.com/philgetz/try-angular-animations"  class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50'>
-              GITHUB
-            </a>
-            </div>
-            </div>
-         </mat-toolbar>
-
     <mat-sidenav class='app-sidenav' opened='false' mode='over' fixedInViewport='true' fixedTopGap='0' fixedBottomGap='0' #sidenav>
-      <mat-toolbar color='primary'>
-          <span class='tw-400 typg-mono'>ANIMATIONS</span>
-          <span fxFlex></span>
-      </mat-toolbar>
+        <mat-toolbar color='primary'>
+            <span class='tw-400 typg-mono'>Animations</span>
+            <span fxFlex></span>
+        </mat-toolbar>
 
-      <mat-nav-list>
-        <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>
-          <mat-icon class='push-right-15 push-left-5 tc-grey-700'>dashboard</mat-icon>
-         <span class='tc-grey-800'>Overview</span>
-        </a>
-        <mat-divider></mat-divider>
-        <ng-template ngFor let-category [ngForOf]='routes'>
-            <h3 matSubheader>{{category.categoryName}}</h3>
-            <a *ngFor='let item of category.routes' mat-list-item [routerLink]="item.route" (click)='sidenav.toggle()'>
-                <mat-icon class='push-right-15 push-left-5 tc-grey-700'>grain</mat-icon>
-              <span class='tc-grey-800'>{{item.name}}</span>
-            </a>
-        </ng-template>
-      </mat-nav-list>
-    </mat-sidenav>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="['/']" (click)='sidenav.toggle()'>
+            <mat-icon class='push-right-15 push-left-5 tc-grey-700'>dashboard</mat-icon>
+           <span class='tc-grey-800'>Overview</span>
+          </a>
+          <mat-divider></mat-divider>
+          <ng-template ngFor let-category [ngForOf]='routes'>
+              <h3 matSubheader>{{category.categoryName}}</h3>
+              <a *ngFor='let item of category.routes' mat-list-item [routerLink]="item.route" (click)='sidenav.toggle()'>
+                  <mat-icon class='push-right-15 push-left-5 tc-grey-700'>grain</mat-icon>
+                <span class='tc-grey-800'>{{item.name}}</span>
+              </a>
+          </ng-template>
+        </mat-nav-list>
+      </mat-sidenav>
 
-    <div class='app-content' cdk-scrollabele>
-            <router-outlet></router-outlet>
-    </div>
+      <mat-sidenav-content class='aa-drawer-container'>
+
+        <div class='aa-layout-container'>
+        <div class='aa-layout'>
+          <mat-toolbar color='primary' mode='over'  class='fixed-header'>
+              <div fxLayout='row' fxFlex='100' fxLayoutAlign='center center'>
+                <div fxLayout='row' fxFlex='100' class='max-page-width width-100' fxLayoutAlign='center center'>
+                <button mat-icon-button (click)='sidenav.toggle()'>
+                    <mat-icon class="mat-18">menu</mat-icon>
+                </button>
+                 <a [routerLink]="['/']" class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50' fxLayout='row'>
+                   <span fxHide fxShow.gt-sm class='push-right-10 typg-mono'>Angular</span>
+                   Animations
+                   </a>
+
+                  <span fxFlex></span>
+                  <a target='_blank' href="https://github.com/philgetz/try-angular-animations"  class='text-nodecoration typg-mono tw-400 push-left-10 tc-grey-50'>
+                    GITHUB
+                  </a>
+                  </div>
+                  </div>
+               </mat-toolbar>
+
+          <div class='app-content' cdk-scrollabele>
+                  <router-outlet></router-outlet>
+          </div>
+
+          </div>
+          </div>
+
+      </mat-sidenav-content>
+
 
   </mat-sidenav-container>
