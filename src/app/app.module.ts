@@ -54,9 +54,16 @@ import { MainComponent } from './main/main.component';
 import { RedditDataService } from './shared/reddit-data.service';
 import { OverviewComponent } from './overview/overview.component';
 import { FadeComponent } from './fade/fade.component';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 @NgModule({
-  declarations: [AppComponent, StaggerComponent, MainComponent, OverviewComponent, FadeComponent],
+  declarations: [
+    AppComponent,
+    StaggerComponent,
+    MainComponent,
+    OverviewComponent,
+    FadeComponent
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -87,7 +94,8 @@ import { FadeComponent } from './fade/fade.component';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatChipsModule,
+    ScrollDispatchModule
   ],
   providers: [RedditDataService],
   bootstrap: [AppComponent]
