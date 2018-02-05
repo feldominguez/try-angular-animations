@@ -8,7 +8,7 @@
 
 <div fxLayoutAlign='row' fxLayoutAlign='center start' class='animation-section__background push-10 push-top-30'>
 
-<div fxFlex='60'>
+<div fxFlex.xs='100' fxFlex.gt-xs='90' fxFlex.gt-sm='70' fxFlex.gt-md='60' >
 
   <h2 class='mat-headline'>Static Data</h2>
   <mat-card>
@@ -21,7 +21,7 @@
 <mat-divider></mat-divider>
 
 <mat-card-content>
-    <mat-list>
+    <mat-list [@listStagger]='staticSubreddits.length'>
       <ng-template ngFor let-item [ngForOf]="staticSubreddits" >
         <mat-list-item>
             {{item}}
@@ -47,8 +47,8 @@
 <mat-divider></mat-divider>
 
 <mat-card-content>
-    <mat-list>
-      <ng-template ngFor let-item [ngForOf]="asyncSubreddits" >
+    <mat-list [@listStagger]='asyncDataLength'>
+      <ng-template ngFor let-item [ngForOf]="asyncSubreddits | async" >
         <mat-list-item>
             {{item}}
         </mat-list-item>
