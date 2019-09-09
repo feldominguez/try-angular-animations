@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,21 +19,11 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatDialogModule,
-  MatProgressBarModule,
-  MatTableModule,
-  MatDialogContent,
-  MatIconRegistry,
-  MatIcon,
   MatTabsModule,
   MatChipsModule,
   MatSelectModule,
-  MatIconBase,
-  MatLineModule,
-  MatCommonModule,
   MatButtonToggleModule,
   MatOptionModule,
-  MatListSubheaderCssMatStyler,
-  MatGridListModule,
   MatDatepickerModule,
   MatNativeDateModule,
   MatSlideToggleModule,

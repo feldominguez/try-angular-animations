@@ -1,45 +1,45 @@
 <mat-toolbar color='primary' class='hgt-min-10 hgt-max-10'></mat-toolbar>
 
 <div class='bgc-grey-900 pad-top-75 pad-bottom-20 push-bottom-70 banner-parent' fxLayoutAlign='row'>
-  <div class='pad-left-20 pad-right-20 pad-left-30 home-banner'>
-    <img src="assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px" class='home-banner-card'>
-    <!-- <img src="assets/bgc-new.png" alt="Colorful card background with moving object" class='home-banner-card'> -->
-      <h1 class='mat-display-1 tw-300 push-bottom-20 tc-grey-50 typg-mono'>Angular <br>Animations</h1>
-      <h3 class='mat-body tw-300 tc-grey-50 typg-hd'>See examples and discover the Animations library <br> Angular offers.</h3>
-  </div>
+    <div class='pad-left-20 pad-right-20 pad-left-30 home-banner'>
+        <img src="assets/banner_card_background.png" alt="Colorful card background with moving object" width="191px" height="250px" class='home-banner-card'>
+        <!-- <img src="assets/bgc-new.png" alt="Colorful card background with moving object" class='home-banner-card'> -->
+        <h1 class='mat-display-1 push-bottom-20 tc-grey-50 typg-mono'>Angular <br>Animations</h1>
+        <h3 class='mat-subheading-2 tc-grey-50 typg-hd'>See examples and discover the Animations library <br> in Angular.</h3>
+    </div>
 </div>
 
 
 <div class='pad-xs' fxLayout='row' fxLayoutAlign='center center'>
-  <div fxLayout='row' fxLayout.lt-sm='column' class='max-page-width width-100' fxLayoutAlign='start start'>
+    <div fxLayout='row' fxLayout.lt-sm='column' class='max-page-width width-100' fxLayoutAlign='start start'>
 
-  <div @fadeAnimate class='push-10'  fxFlex.lt-sm='100' fxFlex.gt-xs='50' fxFlex.gt-md='30'>
-    <mat-card>
-        <mat-card-title>Stagger</mat-card-title>
+        <div @fadeAnimate class='push-10' fxFlex.lt-sm='100' fxFlex.gt-xs='50' fxFlex.gt-md='30'>
+            <mat-card>
+                <mat-card-title>Stagger</mat-card-title>
 
-    <mat-card-content class='hgt-min-45'>
-     Loop through models and animate with a delaying effect
-    </mat-card-content>
-    <mat-card-actions align="start">
-        <a [routerLink]="['/stagger']" mat-button color='accent'>SEE ANIMATION</a>
-    </mat-card-actions>
-    </mat-card>
+                <mat-card-content class='hgt-min-45'>
+                    Animate with a delaying effect by looping through data
+                </mat-card-content>
+                <mat-card-actions align="start">
+                    <a [routerLink]="['/stagger']" mat-button color='accent'>SEE ANIMATION</a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        <div @fadeAnimate class='push-10' fxFlex.lt-sm='100' fxFlex.gt-sm='50' fxFlex.gt-md='30'>
+            <mat-card>
+                <mat-card-title>Fade</mat-card-title>
+
+                <mat-card-content class='hgt-min-45'>
+                    Fade animation
+                </mat-card-content>
+                <mat-card-actions align="start">
+                    <a [routerLink]="['/fade']" mat-button color='accent'>SEE ANIMATION</a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+
+
     </div>
-
-    <div @fadeAnimate class='push-10' fxFlex.lt-sm='100' fxFlex.gt-sm='50' fxFlex.gt-md='30'>
-    <mat-card >
-        <mat-card-title>Fade</mat-card-title>
-
-    <mat-card-content class='hgt-min-45'>
-     Fade animation
-    </mat-card-content>
-    <mat-card-actions align="start">
-        <a [routerLink]="['/fade']" mat-button color='accent'>SEE ANIMATION</a>
-    </mat-card-actions>
-    </mat-card>
-    </div>
-
-
-
-    </div>
-  </div>
+</div>

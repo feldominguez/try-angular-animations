@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { map, tap } from 'rxjs/operators';
-
-import 'rxjs/add/observable/from';
+import { Observable, from } from 'rxjs';
 
 @Injectable()
 export class RedditDataService {
@@ -37,6 +34,6 @@ export class RedditDataService {
   }
 
   getStaticData(): Observable<any> {
-    return Observable.from(this.staticData);
+    return from(this.staticData);
   }
 }

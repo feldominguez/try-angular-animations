@@ -7,8 +7,7 @@ import {
 
 import { RedditDataService } from '../shared';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 import {
   trigger,
@@ -61,14 +60,16 @@ export class StaggerComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.asyncSubreddits = this.redditData.getData().map((data: any) => {
+    this.asyncSubreddits = this.redditData.getData().pipe(map((data: any) => {
       this.asyncDataLength = data.subreddit_names.length;
       return data.subreddit_names;
-    });
+    }));
 
     this.redditData
       .getStaticData()
-      .map((data: any) => data.subreddit_names)
+      .pipe(
+        map((data: any) => data.subreddit_names)
+      )
       .subscribe(data => (this.staticSubreddits = data));
   }
 
@@ -79,10 +80,10 @@ export class StaggerComponent implements OnInit {
   reloadAsyncSubreddits(): void {
     this.asyncSubreddits = null;
     this.asyncDataLength = null;
-    this.asyncSubreddits = this.redditData.getData().map((data: any) => {
+    this.asyncSubreddits = this.redditData.getData().pipe(map((data: any) => {
       this.asyncDataLength = data.subreddit_names.length;
       return data.subreddit_names;
-    });
+    }));
   }
 
   reloadStaticSubreddits(): void {
@@ -91,7 +92,9 @@ export class StaggerComponent implements OnInit {
 
     this.redditData
       .getStaticData()
-      .map((data: any) => data.subreddit_names)
+      .pipe(
+        map((data: any) => data.subreddit_names)
+      )
       .subscribe(data => {
         console.log(this.staticSubreddits);
         this.staticSubreddits = data;
